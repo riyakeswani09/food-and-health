@@ -1,0 +1,129 @@
+.btn {
+  border-radius: 1.5rem; /* xl (24px) corners */
+  padding: 1rem 2rem; /* Vertical 1rem, horizontal 2rem */
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:hover {
+  opacity: 0.95;
+  box-shadow: 0px 8px 24px rgba(0, 109, 64, 0.15);
+}
+
+.btn-primary {
+  background: var(--signature-gradient);
+  color: var(--on-primary);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+
+.btn-nudge {
+  background-color: var(--tertiary-container);
+  color: var(--on-tertiary-container);
+}
+
+/* Card Interactive */
+.card-interactive {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 16px 40px rgba(24, 28, 28, 0.08); /* slightly enhanced ambient shadow */
+}
+
+/* Input Fields */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.input-label {
+  color: var(--on-surface-variant);
+}
+
+.input-wrapper {
+  background-color: var(--surface-container-highest);
+  border-radius: 0.75rem; /* md corners */
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background-color 0.2s ease, outline 0.2s ease;
+  border: none;
+  outline: 1px solid transparent; 
+}
+
+.input-wrapper.focused {
+  background-color: var(--surface-container-lowest);
+  outline: 2px solid var(--primary); /* Focused ghost border substitute or exact active indication */
+}
+
+/* The true ghost border fallback for elements on same background if needed */
+.ghost-border {
+  outline: 1px solid rgba(188, 202, 189, 0.2); /* outline-variant at 20% */
+}
+
+.input-icon {
+  color: var(--outline);
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: 'Lexend', sans-serif;
+  font-size: 1rem;
+  color: var(--on-surface);
+}
+.input-field::placeholder {
+  color: var(--outline);
+}
+
+/* Base styles for progress halo and others */
+.halo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.halo-svg {
+  transform: rotate(-90deg);
+}
+
+.halo-track {
+  fill: none;
+  stroke: var(--primary-fixed);
+  stroke-width: 8;
+}
+
+.halo-path {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 8;
+  stroke-linecap: round;
+  filter: drop-shadow(0px 0px 8px rgba(0, 109, 64, 0.5)); /* 8px glow effect */
+  transition: stroke-dashoffset 1s ease-in-out;
+}

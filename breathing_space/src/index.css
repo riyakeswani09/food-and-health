@@ -1,0 +1,109 @@
+:root {
+  /* Tonal Layering (Surface Colors) */
+  --surface: #f6faf8;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f0f4f2;
+  --surface-container: #ebefed;
+  --surface-container-high: #e5e9e7;
+  --surface-container-highest: #dfe3e1;
+  --surface-bright: #f6faf8;
+  --surface-dim: #d7dbd9;
+
+  /* Primary Accent Colors */
+  --primary: #006d40;
+  --primary-container: #2bb673;
+  --primary-fixed: #7afbb1;
+  --primary-fixed-dim: #5cde97;
+
+  /* Secondary Accent Colors (Focus) */
+  --secondary: #0060ac;
+  --secondary-container: #68abff;
+  --secondary-fixed: #d4e3ff;
+  --secondary-fixed-dim: #a4c9ff;
+
+  /* Tertiary Accent Colors (Nudge/Alert) */
+  --tertiary: #9f412d;
+  --tertiary-container: #f28068;
+  --tertiary-fixed: #ffdad3;
+
+  /* Text & On-Colors */
+  --on-surface: #181c1c;
+  --on-surface-variant: #3d4a40; /* Body Copy */
+  --on-primary: #ffffff;
+  --on-secondary: #ffffff;
+  --on-tertiary-container: #6a1a0a;
+
+  /* Outlines */
+  --outline: #6d7a6f;
+  --outline-variant: #bccabd; /* Used for ghost borders */
+
+  /* Gradients & Shadows */
+  --signature-gradient: linear-gradient(135deg, var(--primary), var(--primary-container));
+  --ambient-shadow: 0px 12px 32px rgba(24, 28, 28, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-width: 0; /* The No-Line Rule: Strict 0px borders everywhere */
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  color: var(--on-surface-variant);
+  background-color: var(--surface);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Glassmorphism Utilities */
+.glass-header {
+  background-color: rgba(246, 250, 248, 0.8); /* surface at 80% opacity */
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Base Card Rule */
+.card {
+  background-color: var(--surface-container-lowest);
+  border-radius: 1.5rem; /* xl corners */
+  box-shadow: var(--ambient-shadow);
+  padding: 24px;
+}
+
+/* Typography Classes mapping to Figma */
+.display-lg { font-size: 3.5rem; }
+.display-md { font-size: 2.75rem; }
+.headline-lg { font-size: 2rem; }
+.headline-sm { font-size: 1.5rem; }
+.title-lg { font-size: 1.25rem; font-weight: 500; }
+.body-lg { font-size: 1.125rem; }
+.body-md { font-size: 1rem; }
+
+/* Utilities */
+.text-center { text-align: center; }
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.rounded-full { border-radius: 9999px; }
